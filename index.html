@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-holder">
+        <form>
+          <h1>Metric/Imperial Unit Conversion</h1>
+          <input
+            id="input"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+            required
+          />
+          <button type="submit" id="btn" class="btn">Convert</button>
+        </form>
+      </div>
+      <div class="converted">
+        <h2>Length (Meter/Feet)</h2>
+        <p class="meter">20 meters = 65.617 feet | 20 feet = 6.096 meters</p>
+      </div>
+      <div class="converted">
+        <h2>Volume (Liters/Gallons)</h2>
+        <p class="liter">
+          20 liters = 5.283 gallons | 20 gallons = 75.708 liters
+        </p>
+      </div>
+      <div class="converted">
+        <h2>Mass (Kilograms/Pounds)</h2>
+        <p class="kilogram">
+          20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
+        </p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
